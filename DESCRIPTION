@@ -1,6 +1,6 @@
 Package: ggdensity
 Title: Interpretable Bivariate Density Visualization with 'ggplot2'
-Version: 0.1.1
+Version: 1.0.0
 Authors@R: 
     c(person(given = "James",
            family = "Otto",
@@ -18,16 +18,19 @@ Description: The 'ggplot2' package provides simple functions for visualizing con
   the traditional height of the estimated density surface. 
 License: MIT + file LICENSE
 Encoding: UTF-8
-RoxygenNote: 7.2.1
+RoxygenNote: 7.2.3
 Depends: ggplot2
 Imports: isoband, vctrs, tibble, MASS, stats, scales
 URL: https://jamesotto852.github.io/ggdensity/,
         https://github.com/jamesotto852/ggdensity/
 BugReports: https://github.com/jamesotto852/ggdensity/issues/
+Suggests: vdiffr, testthat (>= 3.0.0), knitr, rmarkdown
+Config/testthat/edition: 3
+VignetteBuilder: knitr
 NeedsCompilation: no
-Packaged: 2022-10-24 18:20:54 UTC; ubuntu
+Packaged: 2023-02-09 22:57:26 UTC; ubuntu
 Author: James Otto [aut, cre] (<https://orcid.org/0000-0002-0665-2515>),
   David Kahle [aut] (<https://orcid.org/0000-0002-9999-1558>)
 Maintainer: James Otto <jamesotto852@gmail.com>
 Repository: CRAN
-Date/Publication: 2022-10-24 18:55:07 UTC
+Date/Publication: 2023-02-09 23:10:02 UTC
