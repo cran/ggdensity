@@ -1,4 +1,4 @@
-## ---- include = FALSE---------------------------------------------------------
+## ----include = FALSE----------------------------------------------------------
 knitr::opts_chunk$set(
   fig.align = "center",
   dpi = 160,
@@ -18,7 +18,7 @@ df <- data.frame(x = rnorm(500), y = rnorm(500))
 p <- ggplot(df, aes(x, y))
 p + geom_point()
 
-## ---- fig.show="hold", out.width="45%", fig.align = "default"-----------------
+## ----fig.show="hold", out.width="45%", fig.align = "default"------------------
 p + geom_hdr(method = "kde")
 
 p + geom_hdr(method = "mvnorm")
@@ -27,7 +27,7 @@ p + geom_hdr(method = "histogram")
 
 p + geom_hdr(method = "freqpoly")
 
-## ---- fig.show="hold", out.width="45%", fig.align = "default"-----------------
+## ----fig.show="hold", out.width="45%", fig.align = "default"------------------
 p + geom_hdr(method = method_kde())
 
 p + geom_hdr(method = method_mvnorm())
@@ -44,7 +44,7 @@ res <- get_hdr(df, method = method_kde(adjust = 1/2))
 
 str(res)
 
-## ---- fig.show="hold", out.width="45%", fig.align = "default"-----------------
+## ----fig.show="hold", out.width="45%", fig.align = "default"------------------
 p + 
   geom_point() +
   geom_hdr_rug(method = method_kde_1d())
@@ -61,7 +61,7 @@ p +
   geom_point() +
   geom_hdr_rug(method = method_freqpoly_1d())
 
-## ---- fig.show="hold", out.width="45%", fig.align = "default"-----------------
+## ----fig.show="hold", out.width="45%", fig.align = "default"------------------
 p + 
   geom_point() +
   geom_hdr_rug(method = "kde")
@@ -78,7 +78,7 @@ p +
   geom_point() +
   geom_hdr_rug(method = "freqpoly")
 
-## ---- fig.show = "hide"-------------------------------------------------------
+## ----fig.show = "hide"--------------------------------------------------------
 p + 
   geom_point() +
   geom_hdr_rug(method = method_kde()) 
@@ -88,10 +88,10 @@ res <- get_hdr_1d(df$x, method = method_kde_1d())
 
 str(res)
 
-## ---- collapse = TRUE, comment = ""-------------------------------------------
+## ----collapse = TRUE, comment = ""--------------------------------------------
 method_kde
 
-## ---- collapse = TRUE, comment = ""-------------------------------------------
+## ----collapse = TRUE, comment = ""--------------------------------------------
 method_mvnorm
 
 ## -----------------------------------------------------------------------------
@@ -156,7 +156,7 @@ ggplot(df_rot, aes(x, y)) +
   geom_point(size = .4) +
   coord_fixed(xlim = c(-6, 6), ylim = c(-6, 6))
 
-## ---- fig.show="hold", out.width="45%", fig.align = "default"-----------------
+## ----fig.show="hold", out.width="45%", fig.align = "default"------------------
 ggplot(df_rot, aes(x, y)) +
   geom_hdr(method = method_mvnorm_ind(circular = TRUE), ylim = c(-6, 6)) +
   geom_point(size = .4) +
@@ -203,9 +203,9 @@ method_mvnorm_ind_grid <- function() {
 ggplot(df, aes(x, y)) +
   geom_hdr(method = method_mvnorm_ind_grid())
 
-## ---- collapse = TRUE, comment = ""-------------------------------------------
+## ----collapse = TRUE, comment = ""--------------------------------------------
 method_kde_1d
 
-## ---- collapse = TRUE, comment = ""-------------------------------------------
+## ----collapse = TRUE, comment = ""--------------------------------------------
 method_norm_1d
 

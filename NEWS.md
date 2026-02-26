@@ -1,3 +1,13 @@
+# ggdensity 1.0.1
+
+## Fixes
+
+* Package startup message no longer effects the sessions RNG (Reported by @TimTaylor #34)
+
+* Fixed ordering of probabilities in the plot legend to be independent of order specified in `probs` argument (Reported by @z3tt #32)
+
+
+
 # ggdensity 1.0.0
 
 ## Features
@@ -18,7 +28,7 @@ are now specified with `method_*()` and `method_*_1d()` functions
 
 ## Fixes
 
-* [Added support](https://www.tidyverse.org/blog/2022/08/ggplot2-3-4-0-size-to-linewidth/) for the new `linewidth` aesthetic (Reported by @eliocamp, #23)
+* [Added support](https://tidyverse.org/blog/2022/08/ggplot2-3-4-0-size-to-linewidth/) for the new `linewidth` aesthetic (Reported by @eliocamp, #23)
 
 # ggdensity 0.1.1
 
